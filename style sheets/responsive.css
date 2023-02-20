@@ -1,0 +1,252 @@
+@media only screen and (max-width:1200px) {
+    .write {
+        padding: 10vw 0 0 1vw;
+    }
+}
+
+@media only screen and (max-width:965px) {
+    .write {
+        padding: 10vw 0 0 1vw;
+    }
+
+    .Developer {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:820px) {
+    .write {
+        padding: 5vw 0 0 1vw;
+    }
+
+    .write button {
+        padding: 12px 18px;
+        font-size: 13px;
+        box-shadow: 8px 6px 6px #011b32;
+    }
+}
+
+@media only screen and (max-width:820px) {
+    .Developer {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    .logo img {
+        width: 47px;
+        margin: 3px 0 0 13vw;
+    }
+
+    .lists {
+        display: none;
+    }
+
+
+    .moboption img {
+        width: 232px;
+    }
+
+    .mobnav {
+        /* margin-left: 3vw;
+        margin-top: 16px; */
+     position: fixed ;
+     background-color: rgb(233, 233, 233);
+     width: 100%;
+     height: 40px;
+     z-index: 1;
+    }
+
+    .container {
+        margin-left: 0;
+        background-color:#006e92;
+        padding: 0 5px;
+        height: 200vw;
+    }
+
+    .navbar {
+       display: none;
+    }
+   
+    .moboption{
+        margin:9px 0 0 10px;
+    }
+
+    .firstcon {
+
+        width: 100%;
+
+
+    }
+
+    .write {
+        font-size: 20px;
+        margin: 20px 0 0 2vw;
+        text-align: center;
+        color: #fff;
+
+    }
+
+    .mute {
+        font-size: 10px;
+        color: gray;
+    }
+
+    .startbtns {
+        margin: 90px 0 0 -4vw;
+    }
+
+    .know {
+        display: none;
+    }
+
+    .profilepic {
+        width: 80vw;
+        margin: 20vw 0 0 15vw;
+
+
+
+    }
+
+    .he1 {
+        text-align: center;
+        margin: 25px auto;
+    }
+
+    .info {
+        padding: 0 40px;
+        line-height: 2;
+    }
+
+/* table */
+
+.he4 {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+table {
+    overflow-x: hidden;
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* table end */
+
+/* skillsss */
+.k2skill {
+    margin-top: 30px;
+    margin-left: 28vw;
+    width: 40vw;
+
+}
+section{
+    margin-left: 10vw;
+}
+.skills {
+	margin: 20px 0;
+}
+
+.skills div {
+	position: relative;
+	font-weight: bold;
+	padding: 1.2vw;
+	text-align: center;
+    color: #fff;
+   border-top-right-radius:15px ;
+   border-bottom-right-radius:35px ;
+   border-top-left-radius:8px ;
+   border-bottom-left-radius:5px ;
+  font-size: 25px;
+
+}
+.skill-html{
+    width: 75vw;
+    animation: skillbar 2s ease-in-out;
+    background-color: 	#4CBB17;
+    margin: 0.5vw 0;
+}
+.skill-css{
+    width: 72vw;
+    animation: skillbar2 2s ease-in-out;
+    background-color:#7CFC00;
+    margin: 0.5vw 0;
+}
+.skill-js{
+    width: 60vw;
+    animation: skillbar3 2s ease-in-out;
+    background-color:#98FB98;
+    margin: 0.5vw 0;
+}
+
+
+@keyframes skillbar {
+    0%{
+        width: 10vw;
+    }
+    100%{
+        width: 75vw;
+    }
+    
+}
+@keyframes skillbar2 {
+    0%{
+        width: 10vw;
+    }
+    100%{
+        width: 72vw;
+    }
+    
+}
+@keyframes skillbar3 {
+    0%{
+        width: 10vw;
+    }
+    100%{
+        width: 60vw;
+    }
+    
+}
+
+
+
+/* skillend */
+/* edu */
+.k2edu {
+    margin-top: 30px;
+margin-left:28vw ;
+    width: 42vw;
+
+}
+
+
+.info {
+  
+    margin-top: 1vw;
+
+    padding: 0vw 7vw;
+    font-size: 15px;
+    text-align: start;
+}
+
+}
+

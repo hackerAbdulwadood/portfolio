@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Developer/About</title>
+    <link rel="stylesheet" href="style sheets/style.css">
+    <link rel="stylesheet" href="style sheets/contact.css">
+    <link rel="stylesheet" href="style sheets/responsive.css">
+    <link rel="stylesheet" href="style sheets/mobdisplay.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style type="text/css">
+       * {
+         
+          padding: 1px;
+          
+       }
+       
+       .form-container {
+        width: 50%;
+        border-radius: 20px;
+        margin: 79px 0 0 30vw;
+          padding: 50px;
+          background: #173459;
+          color: white;
+          box-shadow: 12px 15px 15px grey;
+          font-family: 'Martel', serif;
+transform: scale(1);
+transition: all 0.3s ease-in-out 0.1s;
+                }
+                .form-container:hover{
+                  transform: scale(1.005);
+                  transition: all 0.3s ease-in-out 0s;
+                  box-shadow: 10px 5px 5px rgb(66, 66, 66);
+                
+                }
+       .input-cnt {
+          display: flex; /* display the icon and the input in a line */
+          margin-bottom: 15px;
+          
+       }
+       input, textarea{font-size: 22px;}
+       .input-cnt:last-child {
+          margin-bottom: 0px;
+       }
+       .input-cnt > i {
+        
+          min-width: 40px; /* set a minimum width for the icon */
+          padding: 28px; /* make sure the icon is centered vertically */
+          text-align: center; /* horizontally center the icon */
+          background: lightgrey;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          color: #0076ff;
+       }
+       /* change styles when focused */
+       .input-cnt:hover > i {
+          background: #0076ff;
+          color: white;
+       }
+       /* style the input and textarea */
+       .input-cnt > input[type="text"], .input-cnt > textarea {
+          outline: none;
+          border: none;
+          padding: 10px;
+          border: 1px solid lightgrey;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          width: 100%;
+       }
+       /* center textarea icon and increase size */
+       .textarea-icon {
+          padding: 60px 10px !important; /* top and bottom paddings are set to 60px */
+       }
+       /* style the submit button */
+       .input-cnt > input[type="submit"] ,.getback{
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        width: 75%;
+       margin: 3px 6px;
+        font-size: 105%;
+        padding: 20px;
+       
+      
+        transition-duration: .5s;
+        cursor: pointer;
+        
+       }
+       .sub{
+        background: #3882d7;
+        color: #ffffff;
+       }
+       /* add a hover effect for the submit button */
+       .input-cnt > input[type="submit"]:hover {
+          color: white;
+          background: #0076ff;
+       }
+       .getback:hover {
+          color: white;
+          background: #989898;
+       }
+       .btns{
+        display: flex;
+        margin: 0 16vw;
+       }
+       h1{
+         text-align: center; margin:90px 0; font-size:55px;
+       }
+    </style>
+
+<style>
+  /* responsive*/
+@media only screen and (max-width:420px) {
+   .form-container{
+      width: 76%;
+      border-radius: 20px;
+      margin: 85px 0 0 3.5vw;
+        padding:8vw;
+     }
+     .input-cnt > i{
+      padding: 10px;
+     }
+     h1{
+      font-size: 30px;
+      margin: 50px 0;
+     }
+     .input-cnt > input[type="submit"] ,.getback{
+      padding: 8px 20px;
+     
+      
+     }
+     .input-cnt{
+      margin: 30px -25px;
+      
+     }
+     .mobnav{
+      height: 50px;
+     }
+     
+   
+}
+</style>
+
+    
+</head>
+
+<body>
+   <nav class="navbar">
+      <div class="logo">
+          <a href="index.html"> <img src="image/LOGOOO.gif" alt=""></a>
+      </div>
+      <ul class="lists">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="webshow.html">Websites</a></li>
+          <li><a href="comment.html"> Help</a></li>
+      </ul>
+
+     
+  </nav>
+  <div class="mobnav">
+      <div class="moboption">
+          <!--    Made by Erik Terwan    -->
+          <!--   24th of November 2015   -->
+          <!--        MIT License        -->
+
+          <div id="menuToggle">
+              <!--
+  A fake / hidden checkbox is used as click reciever,
+  so you can use the :checked selector on it.
+  -->
+              <input id="tryy" type="checkbox" />
+
+              <!--
+  Some spans to act as a hamburger.
+  
+  They are acting like a real hamburger,
+  not that McDonalds stuff.
+  -->
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <!--
+  Too bad the menu has to be inside of the button
+  but hey, it's pure CSS magic.
+  -->
+              <ul id="menu" style="display: none;">
+                  <h2 style="margin: -55px 0 30px 65px;"></h2>
+                  <center> <a href="#">
+                      <li><img src="image/LOGOOO.gif" alt=""></li>
+                  </a></center>
+                  <hr>
+                  <center><a href="#">
+                          <li>Home</li>
+                      </a></center>
+                  <hr>
+                  <center><a href="about.html">
+                          <li>About</li>
+                      </a></center>
+                  <hr>
+                  <center> <a href="#">
+                          <li>Info</li>
+                      </a></center>
+                  <hr>
+                  <center> <a href="#">
+                          <li>Help</li>
+                      </a></center>
+                  <hr>
+                  <center> 
+                          <li><p style="font-size: 15px;color: rgb(255, 255, 255);">Iam Webdeveloper and i love programming i will make Website with my interest</p></li>
+                      </center>
+                  
+
+
+              </ul>
+          </div>
+
+      </div>
+
+  </div>
+      
+      <div class="contain"></div> <div class="form-container aa">
+    
+          <form action="https://script.google.com/macros/s/AKfycby8i_unT7LW9i9kJj5BgJEZHC0tOfQJqMtfilkV6ayQJ_M7iLQRUvCE1zk6353fS6skwg/exec" method="POST">
+              <h1 >Please Submit</h1>
+             <div class="input-cnt">
+                <i class="material-icons">person</i>
+                <input type="text" placeholder="Name" name="name" required />
+             </div>
+             
+             <div class="input-cnt">
+                <i class="material-icons">email</i>
+                <input type="text" placeholder="Email" name="email" required />
+             </div>
+             
+             <div class="input-cnt">
+                <i class="material-icons textarea-icon">message</i>
+                <textarea placeholder="Your message here..." name="message" required></textarea>
+             </div>
+             <div class="btns">
+             <div class="input-cnt">
+                <button class="getback">Go back</button>
+                <input class="sub" type="submit" />
+              
+             </div>
+           
+             </div>
+          </form>
+        </div>
+       </div>
+    </body>
+    </html>      
+               
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+<!-- <map name="mymap"><div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=406&amp;height=400&amp;hl=en&amp;q=surjani town 5b &amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://pdflist.com/" alt="pdf download">Pdf download</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div></map> -->
