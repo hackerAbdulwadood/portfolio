@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Martel:wght@200&family=Varela+Round&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.S-Head {
+  margin: 5vw 0 1vw 43vw;
+}
+
+.navbar {
+  display: inline-block;
+  overflow: hidden;
+  background:linear-gradient(#dddddd,rgb(199, 199, 199));
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 300px;
+}
+
+
+
+
+.logo img {
+  width: 24vh;
+  cursor: pointer;
+  padding: 1vw 3vw;
+}
+
+.lists {
+  display: grid;
+  text-decoration: none;
+
+
+}
+
+.lists li {
+  list-style: none;
+  font-size: 1em;
+ 
+  transform: scale(1);
+  transition: all 0.1s ease-in-out 0.1s;
+  /* padding: 4vh 0 0 2vw; */
+  margin: 2vw 0;
+}
+
+.lists li a {
+  text-decoration: none;
+  color:black;
+  font-family: 'Arvo', serif;
+  font-size: 2em;
+  padding: 1vw 5vw;
+  
+}
+
+.lists li:hover:not(.active) {
+
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out 0.1s;
+
+}
+
+
+.lists li a:hover {
+  color: rgb(127, 118, 110);
+}
+.active{
+  background-color:rgb(199, 199, 199) ;
+}
+.active2{
+  background-color:rgb(194, 192, 192) ;
+}
+.active3{
+  background-color:rgb(194, 192, 192) ;
+}
+.active4{
+  background-color:rgb(194, 192, 192) ;
+}
+
+.container{
+  background-color:rgb(255, 216, 216);
+  margin-left: 300px;
+
+}
+.firstcon{
+  
+  height: 30vw;
+  display: flex;
+
+}
+.write{
+  padding: 10vw 0 0 4vw;
+  font-family: 'Arvo', serif;
+  font-size: 1.5vw;
+}
+.write button{
+  padding: 12px 30px;
+border-radius: 9px;
+border: none;
+margin: 27px 5px;
+box-shadow: 10px 5px 5px grey;
+font-family: 'Martel', serif;
+transform: scale(1);
+transition: all 0.3s ease-in-out 0.1s;
+font-size: 20px;
+}
+.write button:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: 10px 5px 5px rgb(66, 66, 66);
+
+}
+.rightb{
+  background-color: #0058ff;
+  color: white;
+  cursor: pointer;
+}
+.leftb{
+  background-color: #d5d5d5;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.Developer{
+  width: 30vw;
+  height: 30vw;
+  margin-left: 10vw;
+  
+}
+.mute{
+  font-family: 'Martel', serif;
+  font-size: 0.9vw;
+}
+.know{
+  margin-left: 25vw;
+ 
+}
+.know ul{
+  display: flex;
+  list-style: none;
+}
+.know ul a{
+text-decoration: none;
+color: black;
+}
+.know ul li img{
+  
+  padding: 1vw 3vw;
+  margin: 0 2vw;
+ 
+}
+.k1{
+  width: 9vw;
+}
+.k2{
+  width:9.5vw ;
+}
+.k3{
+  width: 8vw;
+}
+.knowsub {
+  font-size: 30px;
+  padding: 1vw 3vw;
+  margin: 0 4vw;
+
+  
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+  background-image: var(--kain-color);
+
+  display: flex;
+  padding: 1vw;
+  overflow: hidden;
+
+}
+
+.portion1 {
+  padding: 0 4vw;
+  color: white;
+  width: 23vw;
+
+}
+
+.portion2 {
+  margin-top: 6vw;
+  color: white;
+  width: 28vw;
+  margin-left: 10vw;
+  transform: scale(1);
+  transition: all 0.1s ease-in-out 0.1s;
+
+}
+
+.portion3 {
+
+  color: white;
+  width: 23vw;
+  margin-top: 6vw;
+  transform: scale(1);
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+.pall ul li:hover {
+  color: rgb(255, 250, 250);
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out 0.1s;
+
+}
+
+.portion1 img {
+  width: 25vw;
+}
+
+.pall ul li {
+  padding: 1vw 0;
+}
+
+.pall ul a {
+  text-decoration: none;
+  list-style: none;
+
+  color: white;
+}
+
+.linklogo {
+  list-style: none;
+  margin-left: auto;
+}
+
+
+
+@media (min-width: 480px) {
+  .mobnav {
+    display: none;
+  }
+  .moboption {
+    display: none;
+  }
+
+  .mobimg {
+    display: none;
+  }
+  .profilepic{
+    display: none;
+  }
+  .mobcontain{
+    display: none;
+  }
+  
+
+}
+
+.moboption {
+  background: transparent;
+  border: transparent;
+
+}
+
+.ss{
+    margin-left: 50vw;
+}

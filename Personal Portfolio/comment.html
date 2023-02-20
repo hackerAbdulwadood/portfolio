@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style sheets/contact.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="comments-container">
+    <h2>Comments</h2>
+    <form id="comment-form">
+      <textarea id="comment-input" placeholder="Write a comment"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  
+    <div id="comments-list">
+      <!-- comments will be added here dynamically -->
+    </div>
+  
+   
+  
+    <div id="reply-form">
+      <!-- reply form will be added here dynamically -->
+    </div>
+  </div>
+  
+  <!-- template for a single comment -->
+  <template id="comment-template">
+    <div class="comment">
+      <p class="comment-author"></p>
+      <p class="comment-text"></p>
+      <button class="reply-button">Reply</button>
+      <button class="comment-like">likee</button>
+    </div>
+  </template>
+  
+  <!-- template for a reply form -->
+  <template id="reply-template">
+    
+    <div id="reply-form">
+      <form id="reply-input">
+        <input type="hidden" id="reply-comment-id" value="">
+        <textarea id="reply-text" placeholder="Write a reply"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+  </template>
+
+
+  <script>// Get comments from local storage or initialize empty array
+    var comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+    // Function to render comments to the page
+   function renderComments() {
+  var commentsList = document.getElementById("comments-list");
+  commentsList.innerHTML = "";
+
+  for (var i = 0; i < comments.length; i++) {
+    var comment = comments[i];
+    var commentEl = document.createElement("div");
+    commentEl.className = "comment";
+
+    var avatarEl = document.createElement("div");
+    avatarEl.className = "comment-avatar";
+    avatarEl.innerHTML = '<img src="https://via.placeholder.com/36x36">'; // Use placeholder image for now
+    commentEl.appendChild(avatarEl);
+
+    var bodyEl = document.createElement("div");
+    bodyEl.className = "comment-body";
+    var usernameEl = document.createElement("span");
+    usernameEl.className = "comment-username";
+    usernameEl.textContent = comment.username;
+    bodyEl.appendChild(usernameEl);
+    var timestampEl = document.createElement("span");
+    timestampEl.className = "comment-timestamp";
+    timestampEl.textContent = new Date(comment.timestamp).toLocaleString();
+    bodyEl.appendChild(timestampEl);
+    var textEl = document.createElement("div");
+    textEl.className = "comment-text";
+    textEl.textContent = comment.text;
+    bodyEl.appendChild(textEl);
+
+    var likeEl = document.createElement("button");
+    likeEl.className = "comment-like";
+    likeEl.innerHTML = '<i class="fas fa-thumbs-up"></i>';
+    likeEl.addEventListener("click", function() {
+      var likesEl = this.nextSibling;
+      var likes = parseInt(likesEl.textContent);
+      likesEl.textContent = likes + 1;
+    });
+    commentEl.appendChild(likeEl);
+    
+    var likesEl = document.createElement("span");
+    likesEl.className = "comment-likes";
+    likesEl.textContent = comment.likes || 0;
+    commentEl.appendChild(likesEl);
+    
+
+    var replyEl = document.createElement("button");
+    replyEl.className = "comment-reply";
+    replyEl.innerHTML = '<i class="fas fa-reply"></i>';
+    replyEl.addEventListener("click", function() {
+      var commentId = this.parentNode.getAttribute("data-comment-id");
+      var replyFormEl = document.getElementById("reply-form");
+      var replyCommentIdEl = document.getElementById("reply-comment-id");
+      replyCommentIdEl.value = commentId;
+      replyFormEl.style.display = "block";
+    });
+    commentEl.appendChild(replyEl);
+    
+
+    var replyFormEl = document.createElement("comment-reply");
+    replyFormEl.className = "comment-reply-form";
+    replyFormEl.style.display = "none";
+    replyFormEl.innerHTML = '<form><input type="text" placeholder="Write a reply"><button type="submit">Submit</button></form>';
+    commentEl.appendChild(replyFormEl);
+
+    commentEl.appendChild(bodyEl);
+
+    commentsList.appendChild(commentEl);
+  }
+
+
+      // Add event listener to all reply buttons
+      var replyButtons = document.getElementsByClassName("comment-reply");
+      for (var i = 0; i < replyButtons.length; i++) {
+        replyButtons[i].addEventListener("click", function () {
+          var commentEl = this.parentNode;
+          var replyFormEl = commentEl.querySelector(".comment-reply-form");
+          if (replyFormEl) {
+            commentEl.removeChild(replyFormEl);
+          } else {
+            replyFormEl = document.createElement("div");
+            replyFormEl.className = "comment-reply-form";
+            replyFormEl.innerHTML = '<form><input type="text" placeholder="Write a reply"><button type="submit">Submit</button></form>';
+            commentEl.appendChild(replyFormEl);
+          }
+        });
+      }
+    }
+    
+
+    // Function to handle form submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      var commentInput = document.getElementById("comment-input");
+      var commentText = commentInput.value.trim();
+
+      if (commentText) {
+        var newComment = {
+          email: "example@example.com", // Use example email for now
+          username: "example", // Use example username for now
+          timestamp: Date.now(),
+          text: commentText
+        };
+        comments.push(newComment);
+        localStorage.setItem("comments", JSON.stringify(comments));
+        renderComments();
+        commentInput.value = "";
+      }
+    }
+
+    // Render comments on page load
+    renderComments();
+
+    // Add event listener to form submission
+    var commentForm = document.getElementById("comment-form");
+    commentForm.addEventListener("submit", handleFormSubmit);
+
+
+
+
+
+    
+  </script>
+  <script>
+ 
+  </script>
+
+</body>
+
+</html>
